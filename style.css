@@ -1,0 +1,33 @@
+/* Ustawienia dla elementu body */
+body {
+    /* Ustawienie GIF-a jako obrazu tła */
+    background-image: url('dog_dancing.gif'); 
+    
+    /* Zapobieganie powtarzaniu GIF-a */
+    background-repeat: no-repeat;
+    
+    /* Skalowanie obrazu, aby zajmował całą dostępną przestrzeń */
+    background-size: cover; 
+    
+    /* Wyśrodkowanie obrazu tła */
+    background-position: center center;
+    
+    /* Upewnienie się, że tło obejmuje cały obszar okna przeglądarki */
+    background-attachment: fixed;
+    
+    /* Opcjonalnie: Ustawienie minimalnej wysokości, aby pokryć całe okno */
+    min-height: 100vh;
+    
+    /* Resetowanie domyślnych marginesów */
+    margin: 0;
+    
+    /* Style dla lepszej widoczności treści na tle */
+    color: white; /* Kolor tekstu */
+    text-align: center;
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+    
+    /* Opcjonalnie: Cień lub półprzezroczysty overlay, 
+       jeśli tekst jest nieczytelny na tle GIF-a. */
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); */
+}

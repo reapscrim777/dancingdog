@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tylko GIF</title>
+    <title>Losowy GIF na całą stronę</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
-<body>
-    </body>
+<body id="tloBody">
+    <script>
+        // === KONFIGURACJA SKRYPTU ===
+        const gifFiles = [
+            'gify/dog1.gif',
+            'gify/dog2.gif',
+            'gify/dog3.gif',
+            'gify/dog4.gif',
+            'gify/dog5.gif',
+            'gify/dog6.gif',
+            // Dodaj tutaj WSZYSTKIE ścieżki do Twoich plików GIF
+        ];
+
+        function ustawLosowyGifJakoTlo() {
+            // 1. Losowanie indeksu z tablicy
+            const randomIndex = Math.floor(Math.random() * gifFiles.length);
+            
+            // 2. Pobranie losowej ścieżki do pliku
+            const randomGifPath = gifFiles[randomIndex];
+            
+            // 3. Znalezienie elementu <body> (przez id="tloBody")
+            const bodyElement = document.getElementById('tloBody');
+            
+            // 4. Ustawienie losowego GIF-a jako tła CSS
+            bodyElement.style.backgroundImage = `url('${randomGifPath}')`;
+        }
+
+        // Uruchomienie funkcji natychmiast po załadowaniu strony
+        ustawLosowyGifJakoTlo();
+
+        // Jeśli chcesz, aby GIF zmieniał się automatycznie co 10 sekund (10000 ms)
+        // setInterval(ustawLosowyGifJakoTlo, 10000); 
+    </script>
+</body>
 </html>
